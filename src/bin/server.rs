@@ -10,7 +10,11 @@ async fn main() {
         .map(|bytes: bytes::Bytes| {
             println!("bytes = {:?}", bytes);
             let msg = home_auto::messages::ThermostatState::decode(bytes);
-            println!("msg = {:?}", msg);
+            match msg {
+                Ok(_) => println!("msg = {:?}", msg),
+                Err(e) => println!("could not decode message: {:?}", e),
+            }
+            // TODO don't return success on failures
             "ok"
         });
 
