@@ -1,0 +1,21 @@
+[package]
+name = "rust_protobuf_home_auto"
+version = "0.1.0"
+authors = ["Douglas Anderson <hockeybuggy@gmail.com>"]
+edition = "2018"
+
+build = "src/build.rs"
+
+[lib]
+name = "home_auto"
+path = "src/lib.rs"
+
+[[bin]]
+name = "thermostat"
+path = "src/bin/fake_thermostat.rs"
+
+[dependencies]
+prost = "0.6"
+
+[build-dependencies]
+prost-build = "0.6"
