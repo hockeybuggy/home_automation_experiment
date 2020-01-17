@@ -1,9 +1,9 @@
-pub mod items {
+pub mod messages {
     include!(concat!(env!("OUT_DIR"), "/messages.rs"));
 }
 
-pub fn create_thermostat_state(name: String) -> items::ThermostatState {
-    let mut state = items::ThermostatState::default();
+pub fn create_thermostat_state(name: String) -> messages::ThermostatState {
+    let mut state = messages::ThermostatState::default();
     state.name = name;
     state
 }

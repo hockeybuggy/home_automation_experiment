@@ -12,11 +12,15 @@ has some bad assumptions such as one type of radiator, rooms without any
 physical attributes [size, topology, insulation]). The thermostats would also
 be able to turn on and off the radiator.
 
+The eventual goal of this would be a network-connected internet-disconnected
+system that would allow anyone to efficiently, and comfortably control the
+space.
+
 ## Demo
 
 ```
-cargo run server
-cargo run fake_therostat
+cargo run --bin server
+cargo run --bin fake_thermostat
 ```
 
 ## Ideas 
@@ -26,6 +30,7 @@ cargo run fake_therostat
 - Optimize for power consumption.
 - Simulate less busy rooms, rooms that get colder faster
 - Record sent messages. Display trends.
+- Web based UI
 
 ### Implementation
 
